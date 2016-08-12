@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import urllib.request
 import os
 
-page = 176
+page = 1
 max_pages = 200
 all_links = []
 
@@ -18,6 +18,6 @@ while page <= max_pages:
     page += 1
 
 all_links = list(set(all_links))
-f = open("comic_links_p6.txt", "w")
+f = open("comic_links.txt", "w")
 f.write("\n".join(str(x) for x in all_links))
 f.close()
